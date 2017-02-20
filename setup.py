@@ -19,7 +19,7 @@ version = __import__('gis_timezones').__version__
 
 
 setup(
-    name='django-belt',
+    name='django-gis-timezones',
     version=version,
     packages=[
         'gis_timezones.management.commands',
