@@ -10,7 +10,7 @@ class TimeZoneManager(models.GeoManager):
 
     def get_from_position(self, position):
         """Gets the timezone from latitude an longitude."""
-        timezones = self.filter(shape__contains=Point(float(position[0]), float(position[1])))
+        timezones = self.filter(shape__contains=Point(float(position[1]), float(position[0])))
         if not timezones.exists():
             raise ObjectDoesNotExist
         return timezones.first()
