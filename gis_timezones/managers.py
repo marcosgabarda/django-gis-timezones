@@ -6,7 +6,7 @@ from django.contrib.gis.geos import Point
 from django.core.exceptions import ObjectDoesNotExist
 
 
-class TimeZoneManager(models.GeoManager):
+class TimeZoneManager(models.Manager):
 
     def get_from_position(self, position):
         """Gets the timezone from latitude an longitude."""
